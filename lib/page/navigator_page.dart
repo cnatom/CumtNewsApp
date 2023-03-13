@@ -24,7 +24,7 @@ class _NavigatorPageState extends State<NavigatorPage>
             appBar: AppBar(
               title: const Text('矿大新闻'),
               bottom: TabBar(
-
+                isScrollable: true,
                 controller: _controller,
                 tabs: _model.data!.data!
                     .map((e) => Tab(
@@ -41,8 +41,9 @@ class _NavigatorPageState extends State<NavigatorPage>
             ),
           );
         } else {
-          return const Scaffold(
-            body: Center(
+          return Scaffold(
+            appBar: AppBar(),
+            body: const Center(
               child: Text('加载中...'),
             ),
           );
