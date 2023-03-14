@@ -1,7 +1,7 @@
 import 'package:cumt_news/page/content_page/entity.dart';
 import 'package:cumt_news/page/content_page/model.dart';
 import 'package:cumt_news/page/content_page/ui/content_image.dart';
-import 'package:cumt_news/page/content_page/ui/content_pdf.dart';
+import 'package:cumt_news/page/content_page/ui/content_pdf/content_pdf.dart';
 import 'package:cumt_news/page/content_page/ui/content_text.dart';
 import 'package:flutter/material.dart';
 
@@ -44,7 +44,7 @@ class _ContentPageState extends State<ContentPage> {
                       item =  ContentText(text: content.content!);
                       break;
                     case "pdf":
-                      item = ContentPDF(url: content.content!);
+                      item = ContentPdf(url: content.content!);
                       break;
                     case "image":
                       item =  ContentImage(url: content.content!);
