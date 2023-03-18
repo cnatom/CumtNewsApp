@@ -26,7 +26,7 @@ class _ContentPdfState extends State<ContentPdf> {
       stream: _model.downloadPDF(url: widget.url),
       builder:
           (BuildContext context, AsyncSnapshot<MapEntry<double, String?>> snapshot) {
-        if (snapshot.hasData && snapshot.data!.key > 1.0) {
+        if (snapshot.hasData && snapshot.data!.key == 1.0) {
           return SizedBox(
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,

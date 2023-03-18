@@ -22,11 +22,11 @@ class ContentPdfModel {
           final file = File("${tempDir.path}/my_file.pdf");
           await file.writeAsBytes(response.data);
           filePath = file.path;
-          _progressController.sink.add(MapEntry(1.1, filePath));
+          _progressController.sink.add(MapEntry(1.0, filePath));
         });
       } catch (e) {}
     } else {
-      _progressController.sink.add(MapEntry(1.1, filePath));
+      _progressController.sink.add(MapEntry(1.0, filePath));
     }
     return _progressController.stream;
   }
